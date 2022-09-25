@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Amy Liao - My Work</title>
+
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutme.html">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="mywork.html">My Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Me</a>
+            </li>
+          </ul>
+    </head>
+    <body>
+        <h1>My Work</h1>
+
+        <h4>Here are some things I made :D</h4>
+        <h6>Click on an image to view its caption.</h6>
+
+        <!--a gallery display of my work. captions will appear if an image is clicked on.-->
+        <div class="gallery" id="topmargin">
+          <figure class="gallery__item gallery__item--1">
+            <img src="photos/art-Camaraderie.jpg" class="gallery__img" alt="Image 1">
+            <div class="caption">
+              <h6>Camaraderie, 2019<br>
+                  Experimentation with bright colors </h6>
+            </div>
+          </figure>
+          <figure class="gallery__item gallery__item--2">
+            <img src="photos/art-Content.JPG" class="gallery__img" alt="Image 2">
+            <div class="caption">
+              <h6>Content, 2019<br>
+                  My friend and her very cute cat</h6>
+            </div>
+          </figure>
+          <figure class="gallery__item gallery__item--3">
+            <img src="photos/art-Luminance.jpg" class="gallery__img" alt="Image 3">
+            <div class="caption">
+              <h6>Luminance, 2020 <br>
+                  Playing around with light and shadows</h6>
+            </div>
+          </figure>
+          <figure class="gallery__item gallery__item--4">
+            <img src="photos/art-Melancholy.jpg" class="gallery__img" alt="Image 4">
+            <div class="caption">
+              <h6>Melancholy, 2019<br>
+                  My first and most favorite digital portrait</h6>
+            </div>
+          </figure>
+          <figure class="gallery__item gallery__item--5">
+            <img src="photos/art-Naivetee.jpg" class="gallery__img" alt="Image 5">
+            <div class="caption">
+              <h6>Naivetee, 2020<br>
+                  An homage to childhood innocence</h6>
+            </div>
+          </figure>
+          <figure class="gallery__item gallery__item--6">
+            <img src="photos/art-Unrestrained.jpg" class="gallery__img" alt="Image 6">
+            <div class="caption">
+              <h6>Unrestrained, 2019 <br>
+                  100% pure, raw power</h6>
+            </div>
+          </figure>
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+
+            //make arrays of artworks and captions
+            let captions = document.querySelectorAll('.caption');
+            let arts = document.querySelectorAll('.gallery__item');
+
+            for (let i = 0; i < captions.length; i++)
+            {
+                //listen for an artwork image being clicked. if it is clicked, toggle show/hide for its caption.
+                arts[i].addEventListener('click', function (){
+                    if (captions[i].style.display === 'block'){
+                      captions[i].style.display = 'none';
+                    } else {
+                      captions[i].style.display = 'block';
+                    }
+                })
+            }
+          })
+        </script>
+
+    </body>
+</html>
